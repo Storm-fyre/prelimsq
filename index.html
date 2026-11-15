@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prelims Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- TOP NAVIGATION BAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <!-- Shown only during Active Quiz Arena -->
+      <button class="btn-secondary btn-sm hidden" id="btn-exit-quiz">&larr; Exit to Setup</button>
+
+      <span class="brand-title">Prelims Studio</span>
+      <span class="subtle-pill" id="header-dataset-stat">6 ready</span>
+    </div>
+
+    <!-- Lobby Navigation (Hidden while inside Quiz Arena) -->
+    <nav class="topnav" id="lobby-nav">
+      <button class="nav-tab active" data-view="config">Setup</button>
+      <button class="nav-tab" data-view="ledger">
+        Notebook <span class="count-pill" id="ledger-alert-count">0</span>
+      </button>
+      <button class="nav-tab" data-view="telemetry">Stats</button>
+    </nav>
+
+    <div class="topbar-right">
+      <div class="segmented" role="group" aria-label="Theme">
+        <button class="seg-btn" data-theme-target="dark">Dark</button>
+        <button class="seg-btn active" data-theme-target="paper">Paper</button>
+        <button class="seg-btn" data-theme-target="light">Light</button>
+      </div>
+
+      <div class="profile-bar" id="profile-bar-controls">
+        <select id="profile-select" class="clean-select" title="Active Profile"></select>
+        <button class="btn-icon" id="btn-new-profile" title="New Profile">+</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ========================================================= -->
+    <!-- LOBBY TAB 1: SETUP                                        -->
+    <!-- ========================================================= -->
+    <section class="view active" id="view-config">
+      <div class="card setup-hero-card">
+        <div class="setup-controls-row">
+          <div class="control-block">
+            <label class="ctrl-label">Mode</label>
+            <div class="segmented">
+              <button class="seg-btn active" data-mode="practice" id="mode-btn-practice">Practice</button>
+              <button class="seg-btn" data-mode="exam" id="mode-btn-exam">Exam</button>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <label class="ctrl-label">Confidence Prompt</label>
+            <div class="segmented">
+              <button class="seg-btn active" id="conf-toggle-on">On</button>
+              <button class="seg-btn" id="conf-toggle-off">Off</button>
+            </div>
+          </div>
+
+          <div class="control-block grow">
+            <label class="ctrl-label">Question Pool</label>
+            <select id="pool-preset-select" class="clean-select full-width">
+              <option value="all" id="opt-pool-all">All Available Questions (0)</option>
+              <option value="unseen" id="opt-pool-unseen">Unseen Only (0)</option>
+              <option value="blindspots" id="opt-pool-blindspots">Critical Blindspots: Sure &rarr; Wrong (0)</option>
+              <option value="lucky" id="opt-pool-lucky">Shaky Mastery: 50:50 &amp; Guesses (0)</option>
+              <option value="wrong" id="opt-pool-wrong">All Previously Wrong (0)</option>
+              <option value="due" id="opt-pool-due">Spaced Repetition Due Today (0)</option>
+              <option value="noted" id="opt-pool-noted">Bookmarked &amp; Personal Notes (0)</option>
+            </select>
+          </div>
+
+          <div class="control-block">
+            <label class="ctrl-label">Questions</label>
+            <div class="segmented" id="filter-limit">
+              <button class="seg-btn" data-limit="6">6</button>
+              <button class="seg-btn active" data-limit="15">15</button>
+              <button class="seg-btn" data-limit="30">30</button>
+              <button class="seg-btn" data-limit="50">50</button>
+              <button class="seg-btn" data-limit="100">100</button>
+            </div>
+          </div>
+
+          <div class="control-block action-col">
+            <button class="btn-primary btn-start" id="btn-start-session">Start Quiz &rarr;</button>
+          </div>
+        </div>
+
+        <div class="more-filters-bar">
+          <button class="btn-link" id="btn-toggle-more-filters">+ Filter by Difficulty or Question Format</button>
+          <span class="pool-summary-text" id="matching-pool-readout">6 questions match</span>
+        </div>
+
+        <div class="advanced-filters-drawer hidden" id="advanced-filters-drawer">
+          <div class="adv-row">
+            <span class="adv-label">Difficulty:</span>
+            <div class="pill-group" id="filter-difficulty">
+              <button class="filter-chip active" data-diff="1">Easy</button>
+              <button class="filter-chip active" data-diff="2">Medium</button>
+              <button class="filter-chip active" data-diff="3">Hard</button>
+            </div>
+          </div>
+          <div class="adv-row">
+            <span class="adv-label">Format:</span>
+            <div class="pill-group" id="filter-format">
+              <button class="filter-chip active" data-fmt="F1">Multi-Statement</button>
+              <button class="filter-chip active" data-fmt="F2">How Many Correct</button>
+              <button class="filter-chip active" data-fmt="F3">Statement I &amp; II</button>
+              <button class="filter-chip active" data-fmt="F4">Direct Concept</button>
+              <button class="filter-chip active" data-fmt="F5">Pair Matching</button>
+              <button class="filter-chip active" data-fmt="F6">Sequence</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="syllabus-toolbar">
+          <div class="syllabus-toolbar-left">
+            <h2 class="section-heading">Syllabus Topics</h2>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="chk-hide-empty" checked />
+              <span>Show only topics with questions ready</span>
+            </label>
+          </div>
+          <div class="syllabus-toolbar-right">
+            <button class="btn-text" id="btn-select-all-topics">Select all</button>
+            <span class="sep">&middot;</span>
+            <button class="btn-text" id="btn-clear-all-topics">Clear</button>
+          </div>
+        </div>
+
+        <div class="syllabus-list" id="syllabus-tree"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- DEDICATED QUIZ ARENA (NOT A TAB — ACTIVE SESSION ONLY)    -->
+    <!-- ========================================================= -->
+    <section class="view" id="view-quiz">
+      <!-- Post-Quiz Score Summary Banner (Revealed on Finish Quiz) -->
+      <div class="card summary-banner hidden" id="post-quiz-summary-banner">
+        <div class="summary-banner-top">
+          <div>
+            <span class="mini-label">Session Complete &middot; Official UPSC Evaluation</span>
+            <h2 class="section-heading" id="summary-headline">Review Your Answers Below</h2>
+          </div>
+          <button class="btn-primary" id="btn-summary-back-setup">Done &middot; Back to Setup</button>
+        </div>
+        <div class="summary-metrics-grid">
+          <div class="sum-box">
+            <span class="mini-label">Net UPSC Score</span>
+            <strong class="sum-val" id="sum-net-score">0.00</strong>
+          </div>
+          <div class="sum-box">
+            <span class="mini-label">Correct (+2.00)</span>
+            <strong class="sum-val text-success" id="sum-correct">0</strong>
+          </div>
+          <div class="sum-box">
+            <span class="mini-label">Wrong (-0.67)</span>
+            <strong class="sum-val text-danger" id="sum-wrong">0</strong>
+          </div>
+          <div class="sum-box">
+            <span class="mini-label">Skipped (0.00)</span>
+            <strong class="sum-val" id="sum-skipped">0</strong>
+          </div>
+          <div class="sum-box">
+            <span class="mini-label">Blindspots (Sure &rarr; Wrong)</span>
+            <strong class="sum-val text-danger" id="sum-blindspots">0</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-workspace" id="quiz-active-layout">
+        <div class="quiz-main">
+          <!-- Distraction-Free Question Header: Plain Text Left, Real Buttons Right -->
+          <div class="q-header">
+            <div class="q-header-left">
+              <span class="q-counter" id="q-index-display">Question 1 of 6</span>
+            </div>
+            <div class="q-header-right">
+              <button class="btn-action-pill" id="btn-bookmark-q">☆ Bookmark</button>
+              <button class="btn-action-pill" id="btn-flag-review-q">&#9872; Flag for Review</button>
+            </div>
+          </div>
+
+          <!-- Question Paper Card -->
+          <article class="card q-card">
+            <div class="q-stem" id="q-stem-text"></div>
+            <div class="q-statements" id="q-items-list"></div>
+            <div class="q-prompt" id="q-prompt-text"></div>
+            <div class="q-options" id="q-options-container"></div>
+
+            <!-- Answer Lock & Navigation Bar -->
+            <div class="q-footer">
+              <div class="conf-bar" id="confidence-panel">
+                <span class="conf-hint">Lock answer with confidence (or press 1, 2, 3):</span>
+                <div class="conf-btn-group">
+                  <button class="btn-conf" id="btn-conf-certain" disabled>
+                    <strong>1 &middot; Sure</strong> <span>100% certain</span>
+                  </button>
+                  <button class="btn-conf" id="btn-conf-5050" disabled>
+                    <strong>2 &middot; 50:50</strong> <span>Eliminated options</span>
+                  </button>
+                  <button class="btn-conf" id="btn-conf-guess" disabled>
+                    <strong>3 &middot; Guess</strong> <span>Hunch / gamble</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="direct-bar hidden" id="direct-lock-panel">
+                <button class="btn-primary" id="btn-commit-direct" disabled>Lock Answer (Enter)</button>
+              </div>
+
+              <div class="q-nav">
+                <button class="btn-secondary" id="btn-prev-q">&larr; Previous</button>
+                <button class="btn-text" id="btn-skip-q">Skip Question</button>
+                <button class="btn-secondary" id="btn-next-q">Next &rarr;</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Explanation Card (Metadata revealed HERE after answering!) -->
+          <section class="card exp-card hidden" id="explanation-drawer">
+            <div class="exp-banner" id="verdict-banner">
+              <div>
+                <strong id="verdict-status-tag">Correct (+2.00)</strong>
+                <span class="exp-diag" id="verdict-diagnostic-text"></span>
+              </div>
+              <span class="mono-pill" id="verdict-correct-key">Official Key: B</span>
+            </div>
+
+            <!-- Post-Answer Metadata Strip (Topic, Difficulty, Serial Code) -->
+            <div class="exp-meta-strip">
+              <span class="subtle-pill" id="exp-diff-badge">Difficulty: Medium</span>
+              <span class="subtle-pill" id="exp-topic-badge">Topic</span>
+              <span class="subtle-pill" id="exp-serial-badge">P-01-01-001</span>
+            </div>
+
+            <div class="exp-core">
+              <div class="mini-label">Core Concept ("Why &amp; How")</div>
+              <p id="exp-core-text"></p>
+            </div>
+
+            <div class="exp-breakdown">
+              <div class="mini-label">Statement Breakdown</div>
+              <div class="exp-list" id="exp-statements-list"></div>
+            </div>
+
+            <div class="exp-bottom-row">
+              <div class="exp-source-col">
+                <div class="mini-label">Reference</div>
+                <div class="ref-text" id="exp-ref-text"></div>
+                <div class="hooks-list" id="exp-hooks-row"></div>
+              </div>
+              <div class="exp-note-col">
+                <div class="mini-label">
+                  My Revision Note <span class="save-msg" id="note-save-status"></span>
+                </div>
+                <div class="note-input-row">
+                  <input type="text" id="q-personal-note" class="clean-input" placeholder="Add a short takeaway or mnemonic..." />
+                  <button class="btn-secondary" id="btn-save-note">Save</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Side Panel: Timer & Question Palette -->
+        <aside class="quiz-side">
+          <div class="card side-card">
+            <div class="side-top">
+              <div>
+                <div class="mini-label" id="sidebar-mode-label">Practice</div>
+                <div class="timer-num" id="session-timer">00:00</div>
+              </div>
+              <button class="btn-primary btn-sm" id="btn-finish-session">Finish Quiz</button>
+            </div>
+
+            <div class="side-stats" id="live-telemetry-box">
+              <div class="mini-stat">
+                <span>Score</span>
+                <strong id="live-net-score">0.00</strong>
+              </div>
+              <div class="mini-stat">
+                <span>Right / Wrong</span>
+                <strong id="live-right-wrong">0 / 0</strong>
+              </div>
+              <div class="mini-stat">
+                <span>Blindspots</span>
+                <strong class="text-danger" id="live-blindspots">0</strong>
+              </div>
+            </div>
+
+            <div class="palette-wrap">
+              <div class="mini-label">Questions</div>
+              <div class="palette-grid" id="question-palette-grid"></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- LOBBY TAB 2: NOTEBOOK (BLINDSPOTS, LUCKY GUESSES & NOTES) -->
+    <!-- ========================================================= -->
+    <section class="view" id="view-ledger">
+      <div class="card">
+        <div class="notebook-header">
+          <div>
+            <h2 class="section-heading">Revision Notebook</h2>
+            <p class="section-sub">Questions you got wrong, guessed via 50:50, or saved personal notes on.</p>
+          </div>
+          <div class="pill-group" id="ledger-filter-bar">
+            <button class="filter-chip active" data-ledger="all">All Attempted</button>
+            <button class="filter-chip" data-ledger="blindspot">Blindspots (Sure &rarr; Wrong)</button>
+            <button class="filter-chip" data-ledger="lucky">50:50 &amp; Guesses</button>
+            <button class="filter-chip" data-ledger="notes">Saved Notes &amp; Bookmarks</button>
+            <button class="filter-chip" data-ledger="due">Due Today</button>
+          </div>
+        </div>
+
+        <div class="notebook-list" id="ledger-items-container"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- LOBBY TAB 3: STATS & PROFILE CONTROLS                     -->
+    <!-- ========================================================= -->
+    <section class="view" id="view-telemetry">
+      <div class="kpi-row">
+        <div class="card kpi-card">
+          <span class="mini-label">Attempted</span>
+          <strong class="kpi-val" id="kpi-total-attempted">0</strong>
+        </div>
+        <div class="card kpi-card">
+          <span class="mini-label">Accuracy</span>
+          <strong class="kpi-val" id="kpi-accuracy">0%</strong>
+        </div>
+        <div class="card kpi-card">
+          <span class="mini-label">Net UPSC Score</span>
+          <strong class="kpi-val" id="kpi-net-marks">0.00</strong>
+        </div>
+        <div class="card kpi-card">
+          <span class="mini-label">Blindspot Rate (Sure &rarr; Wrong)</span>
+          <strong class="kpi-val text-danger" id="kpi-blindspot-rate">0%</strong>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="card">
+          <h3 class="section-heading">Confidence Efficiency (+2.00 / -0.67)</h3>
+          <p class="section-sub">Shows whether your 50:50 eliminations and guesses are gaining or losing net marks.</p>
+          <table class="clean-table">
+            <thead>
+              <tr>
+                <th>Confidence</th>
+                <th>Tried</th>
+                <th>Right</th>
+                <th>Wrong</th>
+                <th>Net Marks</th>
+                <th>Verdict</th>
+              </tr>
+            </thead>
+            <tbody id="confidence-matrix-tbody"></tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h3 class="section-heading">Traps You Fall For Most</h3>
+          <p class="section-sub">Tracks which UPSC statement traps caused your wrong answers.</p>
+          <div class="trap-list" id="trap-vulnerability-list"></div>
+        </div>
+      </div>
+
+      <div class="card profile-mgmt-card">
+        <h3 class="section-heading">Profile &amp; History Controls</h3>
+        <div class="mgmt-row">
+          <div>
+            <strong>Backup or Restore Profile</strong>
+            <p class="section-sub">Export your history and notes as a JSON file or import on another device.</p>
+          </div>
+          <div class="btn-row">
+            <button class="btn-secondary" id="btn-export-profile">Export Backup</button>
+            <label class="btn-secondary file-btn">
+              Import Backup
+              <input type="file" id="input-import-profile" accept=".json" hidden />
+            </label>
+          </div>
+        </div>
+
+        <div class="mgmt-row">
+          <div>
+            <strong>Reset Subject History</strong>
+            <p class="section-sub">Clear attempt history for one subject to solve it fresh.</p>
+          </div>
+          <div class="btn-row">
+            <select id="reset-subject-select" class="clean-select">
+              <option value="P">Indian Polity</option>
+              <option value="E">Macroeconomics</option>
+              <option value="G">Geography</option>
+              <option value="V">Environment</option>
+              <option value="M">Modern History</option>
+              <option value="A">Ancient &amp; Culture</option>
+              <option value="S">Science &amp; Tech</option>
+            </select>
+            <button class="btn-secondary" id="btn-reset-subject">Reset Subject</button>
+          </div>
+        </div>
+
+        <div class="mgmt-row">
+          <div>
+            <strong>Clear All History in Current Profile</strong>
+            <p class="section-sub">Wipes all attempts, scores, and notes for the active profile back to zero.</p>
+          </div>
+          <button class="btn-danger" id="btn-reset-all-history">Clear All History</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

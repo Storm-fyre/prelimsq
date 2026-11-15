@@ -1,0 +1,1056 @@
+{
+  "generated_at": "2026-11-09T08:50:13Z",
+  "difficulties": {
+    "1": "Easy (Single Core Concept / Direct Provision)",
+    "2": "Medium (Two-Concept Comparison / Classic UPSC Trap)",
+    "3": "Hard (Multi-Dimensional / Inter-Chapter Linkage / Elimination Blocked)"
+  },
+  "formats": {
+    "F1": "Standard Multi-Statement Combination (e.g., 1 only / 2 only / Both / Neither)",
+    "F2": "How Many Statements Correct (Only one / Only two / All three / None)",
+    "F3": "Statement-I & Statement-II (Assertion-Reasoning 4-Option Standard)",
+    "F4": "Direct Conceptual Paragraph MCQ (Single Stem with 4 Rich Conceptual Options)",
+    "F5": "Pair Matching Table (3 or 4 Pairs with 'How many pairs' or combination options)",
+    "F6": "Chronological or Spatial Ordering (Arrange events in time or features N-S / E-W)"
+  },
+  "traps": {
+    "T1": "Authority / Institution Swap (e.g., President vs Parliament, RBI vs SEBI)",
+    "T2": "Constitutional vs Statutory / Executive Origin Trap (e.g., 'The Constitution defines...')",
+    "T3": "Extreme / Absolute Word Trap (Only, Always, Never, All, Completely)",
+    "T4": "Cause-and-Effect / Mechanism Inversion (e.g., Yield up -> Bond price up)",
+    "T5": "Condition / Exception Reversal (Swapping mandatory vs discretionary provisions)",
+    "T6": "Chronology / Anachronism Trap (Mixing timelines or contemporary rulers/events)",
+    "T7": "Scope / Applicability Confusion (e.g., Citizens only vs All Persons; Union vs State)"
+  },
+  "subjects": {
+    "A": {
+      "name": "Ancient, Medieval India & Art/Culture",
+      "file": "A_ancient_medieval.json",
+      "count": 558,
+      "modules": {
+        "01": {
+          "name": "Pre-History, Indus Valley Civilization & Vedic Age",
+          "topics": {
+            "01": {
+              "id": "A-01-01",
+              "name": "Paleolithic, Mesolithic, Neolithic & Chalcolithic Cultures",
+              "target_qs": 18,
+              "count": 18
+            },
+            "02": {
+              "id": "A-01-02",
+              "name": "Indus Valley Civilization: Town Planning, Economy, Craft & Religion",
+              "target_qs": 30,
+              "count": 30
+            },
+            "03": {
+              "id": "A-01-03",
+              "name": "Vedic Society, Polity, Economy & Religious Evolution (Rig Vedic vs Later Vedic)",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "02": {
+          "name": "Heterodox Religions & The Mauryan Empire",
+          "topics": {
+            "01": {
+              "id": "A-02-01",
+              "name": "Mahajanapadas, Urbanization II & Rise of Magadha Hegemony",
+              "target_qs": 18,
+              "count": 18
+            },
+            "02": {
+              "id": "A-02-02",
+              "name": "Buddhism: Philosophical Doctrines, Sects, Councils & Canonical Literature",
+              "target_qs": 36,
+              "count": 36
+            },
+            "03": {
+              "id": "A-02-03",
+              "name": "Jainism, Heterodox Sects (Ajivikas, Charvakas) & Philosophy",
+              "target_qs": 30,
+              "count": 30
+            },
+            "04": {
+              "id": "A-02-04",
+              "name": "Mauryan Administration, Economy, Ashokan Dhamma & Edicts",
+              "target_qs": 30,
+              "count": 30
+            }
+          }
+        },
+        "03": {
+          "name": "Post-Mauryan, Sangam Age & Gupta Era",
+          "topics": {
+            "01": {
+              "id": "A-03-01",
+              "name": "Post-Mauryan Dynasties: Sungas, Kanvas, Indo-Greeks, Sakas, Kushanas & Satavahanas",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "A-03-02",
+              "name": "Sangam Age: Tamil Polity (Cheras, Cholas, Pandyas), Society, Trade & Epics",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "A-03-03",
+              "name": "Gupta Empire: Administration, Land Grants, Agrarian Economy, Literature & Science",
+              "target_qs": 30,
+              "count": 30
+            },
+            "04": {
+              "id": "A-03-04",
+              "name": "Post-Gupta Transitions: Harshavardhana, Vakatakas, Chalukyas & Pallavas",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "04": {
+          "name": "Early Medieval India & Imperial Cholas",
+          "topics": {
+            "01": {
+              "id": "A-04-01",
+              "name": "Tripartite Struggle (Palas, Pratiharas, Rashtrakutas) & Early Medieval Polity",
+              "target_qs": 18,
+              "count": 18
+            },
+            "02": {
+              "id": "A-04-02",
+              "name": "Imperial Cholas: Administration, Local Self-Government & Maritime Power",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "05": {
+          "name": "Delhi Sultanate, Vijayanagara Empire & Mughal India",
+          "topics": {
+            "01": {
+              "id": "A-05-01",
+              "name": "Delhi Sultanate: Administrative Institutions, Revenue Terms & Architectural Evolution",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "A-05-02",
+              "name": "Vijayanagara & Bahmani Kingdoms: Nayankara System, Revenue & Foreign Travellers",
+              "target_qs": 30,
+              "count": 30
+            },
+            "03": {
+              "id": "A-05-03",
+              "name": "Mughal Empire: Mansabdari, Jagirdari, Land Revenue Systems (Zabt/Dahsala) & Marathas",
+              "target_qs": 30,
+              "count": 30
+            },
+            "04": {
+              "id": "A-05-04",
+              "name": "Bhakti & Sufi Movements: Saints, Philosophy, Literature & Syncretism",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "06": {
+          "name": "Indian Art, Architecture, Sculpture & Painting",
+          "topics": {
+            "01": {
+              "id": "A-06-01",
+              "name": "Rock-Cut Caves, Stupa Architecture & Buddhist Sculpture Schools",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "A-06-02",
+              "name": "Temple Architecture: Nagara, Dravida, Vesara Styles & Indo-Islamic Architecture",
+              "target_qs": 30,
+              "count": 30
+            },
+            "03": {
+              "id": "A-06-03",
+              "name": "Indian Paintings: Murals, Miniature Schools & Folk Traditions",
+              "target_qs": 18,
+              "count": 18
+            }
+          }
+        },
+        "07": {
+          "name": "Philosophy, Performing Arts & Classical Literature",
+          "topics": {
+            "01": {
+              "id": "A-07-01",
+              "name": "Six Schools of Indian Classical Philosophy (Shad-Darshana), Music & Classical Dances",
+              "target_qs": 18,
+              "count": 18
+            },
+            "02": {
+              "id": "A-07-02",
+              "name": "Ancient & Medieval Literature, Scientific Treatises & UNESCO Intangible Heritage",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        }
+      }
+    },
+    "E": {
+      "name": "Macroeconomics & Indian Economy Fundamentals",
+      "file": "E_economy.json",
+      "count": 432,
+      "modules": {
+        "01": {
+          "name": "National Income, Growth & Development",
+          "topics": {
+            "01": {
+              "id": "E-01-01",
+              "name": "GDP, GNP, GVA, Deflator, Base Year & Green National Accounting",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "E-01-02",
+              "name": "Capital-Output Ratio, Potential Output, Business Cycles & Inequality Metrics",
+              "target_qs": 18,
+              "count": 18
+            }
+          }
+        },
+        "02": {
+          "name": "Money Supply, Banking Regulation & Monetary Policy",
+          "topics": {
+            "01": {
+              "id": "E-02-01",
+              "name": "Money Supply Aggregates (M0–M3), High-Powered Money & Multiplier",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "E-02-02",
+              "name": "RBI Monetary Policy Framework, Policy Rates & Liquidity Tools",
+              "target_qs": 36,
+              "count": 36
+            },
+            "03": {
+              "id": "E-02-03",
+              "name": "Banking Architecture, Basel Norms, NPA Resolution, PCA & NBFCs",
+              "target_qs": 30,
+              "count": 30
+            },
+            "04": {
+              "id": "E-02-04",
+              "name": "Digital Currency, CBDC, Priority Sector Lending & Financial Inclusion",
+              "target_qs": 18,
+              "count": 18
+            }
+          }
+        },
+        "03": {
+          "name": "Inflation, Fiscal Policy, Budgeting & Taxation",
+          "topics": {
+            "01": {
+              "id": "E-03-01",
+              "name": "Inflation Indices (CPI vs WPI), Core Inflation & Structural Drivers",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "E-03-02",
+              "name": "Union Budget Structure, Deficits, Public Debt & FRBM Act",
+              "target_qs": 30,
+              "count": 30
+            },
+            "03": {
+              "id": "E-03-03",
+              "name": "Taxation Structure, Direct vs Indirect, Laffer Curve, Angel Tax & GST",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "04": {
+          "name": "Financial Markets, Instruments & Securities Regulation",
+          "topics": {
+            "01": {
+              "id": "E-04-01",
+              "name": "Money Market Instruments: T-Bills, Commercial Paper, CD & Call Money",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "E-04-02",
+              "name": "Capital Markets, Bond Yields, G-Secs, Derivatives, REITs/InvITs & SEBI",
+              "target_qs": 36,
+              "count": 36
+            }
+          }
+        },
+        "05": {
+          "name": "External Sector, Balance of Payments, Forex & Global Trade",
+          "topics": {
+            "01": {
+              "id": "E-05-01",
+              "name": "Balance of Payments (BoP), Current vs Capital Account & Convertibility",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "E-05-02",
+              "name": "Exchange Rate Mechanisms: NEER, REER, Currency Depreciation & Swaps",
+              "target_qs": 30,
+              "count": 30
+            },
+            "03": {
+              "id": "E-05-03",
+              "name": "WTO Framework (Subsidy Boxes, TRIPS, Disputes), IMF & World Bank",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "06": {
+          "name": "Agriculture Economics, Infrastructure & Social Sectors",
+          "topics": {
+            "01": {
+              "id": "E-06-01",
+              "name": "Agriculture Price Support (MSP, FRP), Procurement & Subsidies",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "E-06-02",
+              "name": "Infrastructure Financing, PPP Models (BOT, HAM, EPC) & Industrial Policy",
+              "target_qs": 18,
+              "count": 18
+            },
+            "03": {
+              "id": "E-06-03",
+              "name": "Employment Metrics, Labour Force Surveys & Poverty Estimation",
+              "target_qs": 18,
+              "count": 18
+            }
+          }
+        }
+      }
+    },
+    "G": {
+      "name": "Geography (Physical, World & Indian)",
+      "file": "G_geography.json",
+      "count": 534,
+      "modules": {
+        "01": {
+          "name": "Geomorphology & Earth's Dynamic Interior",
+          "topics": {
+            "01": {
+              "id": "G-01-01",
+              "name": "Earth Interior, Seismic Wave Propagation (P/S waves) & Discontinuities",
+              "target_qs": 18,
+              "count": 18
+            },
+            "02": {
+              "id": "G-01-02",
+              "name": "Continental Drift, Seafloor Spreading & Plate Tectonics Theory",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "G-01-03",
+              "name": "Volcanism, Earthquakes, Plutonic Intrusions & Rock Types",
+              "target_qs": 24,
+              "count": 24
+            },
+            "04": {
+              "id": "G-01-04",
+              "name": "Weathering, Mass Movements & Fluvial/Glacial/Aeolian/Karst Landforms",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "02": {
+          "name": "Climatology & Atmospheric Mechanisms",
+          "topics": {
+            "01": {
+              "id": "G-02-01",
+              "name": "Atmospheric Thermal Structure, Insolation & Terrestrial Heat Budget",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "G-02-02",
+              "name": "Atmospheric Pressure Belts, Coriolis Force & Planetary Wind Systems",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "G-02-03",
+              "name": "Atmospheric Moisture, Stability, Cloud Classification & Jet Streams",
+              "target_qs": 24,
+              "count": 24
+            },
+            "04": {
+              "id": "G-02-04",
+              "name": "Air Masses, Frontogenesis, Tropical vs Temperate Cyclones & Polar Vortex",
+              "target_qs": 30,
+              "count": 30
+            },
+            "05": {
+              "id": "G-02-05",
+              "name": "World Climatic Regions (Köppen Classification) & Vegetation Adaptation",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "03": {
+          "name": "Oceanography & Marine Dynamics",
+          "topics": {
+            "01": {
+              "id": "G-03-01",
+              "name": "Ocean Floor Topography, Marine Temperature & Salinity Distribution",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "G-03-02",
+              "name": "Ocean Currents (Gyres, Upwelling), Tides & Thermohaline Circulation",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "G-03-03",
+              "name": "Coral Reef Ecosystems, Bleaching & Ocean-Atmospheric Teleconnections (ENSO/IOD)",
+              "target_qs": 30,
+              "count": 30
+            }
+          }
+        },
+        "04": {
+          "name": "Indian Physical Geography, Drainage & Climate",
+          "topics": {
+            "01": {
+              "id": "G-04-01",
+              "name": "Geological Evolution, Himalayas, Northern Plains & Island Groups",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "G-04-02",
+              "name": "Peninsular Plateau, Western & Eastern Ghats, Coastal Plains & Soils",
+              "target_qs": 30,
+              "count": 30
+            },
+            "03": {
+              "id": "G-04-03",
+              "name": "Himalayan Drainage Systems: Indus, Ganga, Brahmaputra & Tributaries",
+              "target_qs": 30,
+              "count": 30
+            },
+            "04": {
+              "id": "G-04-04",
+              "name": "Peninsular Drainage Systems: East-Flowing vs West-Flowing Rivers",
+              "target_qs": 30,
+              "count": 30
+            },
+            "05": {
+              "id": "G-04-05",
+              "name": "Indian Monsoon Mechanics, Onset, Retreat, Breaks & Natural Vegetation",
+              "target_qs": 30,
+              "count": 30
+            }
+          }
+        },
+        "05": {
+          "name": "Economic Geography, Agricultural Systems & World Mapping",
+          "topics": {
+            "01": {
+              "id": "G-05-01",
+              "name": "Indian Cropping Patterns, Agro-Climatic Zones & Major Cash/Food Crops",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "G-05-02",
+              "name": "Minerals, Metallic/Non-Metallic Belts & Conventional Energy Resources",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "G-05-03",
+              "name": "Global Strategic Chokepoints, Straits, Canals, Seas & Mountain Chains",
+              "target_qs": 24,
+              "count": 24
+            },
+            "04": {
+              "id": "G-05-04",
+              "name": "Industrial Locational Theories (Weber) & Major Indian Ports/Corridors",
+              "target_qs": 12,
+              "count": 12
+            }
+          }
+        }
+      }
+    },
+    "M": {
+      "name": "Modern Indian History (1707–1947)",
+      "file": "M_modern_history.json",
+      "count": 432,
+      "modules": {
+        "01": {
+          "name": "18th Century India & British Consolidation",
+          "topics": {
+            "01": {
+              "id": "M-01-01",
+              "name": "Decline of the Mughals, Regional Succession States & 18th Century Debate",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "M-01-02",
+              "name": "European Trading Rivalry, Anglo-French Carnatic Wars & Dual Government",
+              "target_qs": 18,
+              "count": 18
+            },
+            "03": {
+              "id": "M-01-03",
+              "name": "British Expansionist Devices: Subsidiary Alliance, Lapse & Anglo Wars",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "02": {
+          "name": "Colonial Economy, Administrative Structure & Policies",
+          "topics": {
+            "01": {
+              "id": "M-02-01",
+              "name": "British Land Revenue Settlements: Permanent, Ryotwari & Mahalwari",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "M-02-02",
+              "name": "Colonial Economic Drain, De-industrialization & Commercialization of Agriculture",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "M-02-03",
+              "name": "Colonial Administrative Pillars: Civil Services, Police, Judiciary, Education & Press",
+              "target_qs": 30,
+              "count": 30
+            }
+          }
+        },
+        "03": {
+          "name": "Early Resistance, Popular Uprisings & Socio-Religious Reforms",
+          "topics": {
+            "01": {
+              "id": "M-03-01",
+              "name": "Tribal Uprisings, Peasant Movements & The Revolt of 1857",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "M-03-02",
+              "name": "19th & 20th Century Socio-Religious Reform Movements and Ideologues",
+              "target_qs": 30,
+              "count": 30
+            }
+          }
+        },
+        "04": {
+          "name": "Early Nationalism, Moderates, Extremists & Revolutionary Phase I",
+          "topics": {
+            "01": {
+              "id": "M-04-01",
+              "name": "Early Political Associations, Foundation of INC & The Moderate Phase (1885–1905)",
+              "target_qs": 18,
+              "count": 18
+            },
+            "02": {
+              "id": "M-04-02",
+              "name": "Swadeshi Movement, Surat Split (1907), Revolutionary Phase I & Home Rule",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "05": {
+          "name": "Gandhian Mass Movements (1915–1942)",
+          "topics": {
+            "01": {
+              "id": "M-05-01",
+              "name": "Gandhi's Early Satyagrahas, Rowlatt, Jallianwala & Non-Cooperation/Khilafat",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "M-05-02",
+              "name": "Swarajists vs No-Changers, Simon Commission, Nehru Report & Civil Disobedience",
+              "target_qs": 30,
+              "count": 30
+            },
+            "03": {
+              "id": "M-05-03",
+              "name": "Round Table Conferences, Communal Award, Poona Pact & 1937 Elections",
+              "target_qs": 24,
+              "count": 24
+            },
+            "04": {
+              "id": "M-05-04",
+              "name": "World War II, August Offer, Cripps Mission & Quit India Movement (1942)",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "06": {
+          "name": "Diverse Strands, Subhas Chandra Bose & Transfer of Power (1942–1947)",
+          "topics": {
+            "01": {
+              "id": "M-06-01",
+              "name": "Revolutionary Phase II (HSRA), Left, Trade Unions & Peasant Movements",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "M-06-02",
+              "name": "Subhas Chandra Bose, INA, RIN Mutiny, Rajagopalachari Formula & Desai-Liaquat",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "M-06-03",
+              "name": "Cabinet Mission Plan, Direct Action Day, Partition & Integration of States",
+              "target_qs": 18,
+              "count": 18
+            },
+            "04": {
+              "id": "M-06-04",
+              "name": "Comparative Survey of Governor-Generals, Viceroys & Key Commissions",
+              "target_qs": 12,
+              "count": 12
+            }
+          }
+        }
+      }
+    },
+    "P": {
+      "name": "Indian Polity & Constitutional Framework",
+      "file": "P_polity.json",
+      "count": 540,
+      "modules": {
+        "01": {
+          "name": "Constitutional Foundations & Evolution",
+          "topics": {
+            "01": {
+              "id": "P-01-01",
+              "name": "Historical British Constitutional Acts (1773–1947) & Constituent Assembly",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "P-01-02",
+              "name": "Preamble, Philosophical Foundations & Amendability",
+              "target_qs": 12,
+              "count": 12
+            },
+            "03": {
+              "id": "P-01-03",
+              "name": "Union and its Territory (Articles 1–4) & State Reorganization",
+              "target_qs": 12,
+              "count": 12
+            },
+            "04": {
+              "id": "P-01-04",
+              "name": "Citizenship (Articles 5–11, Citizenship Act 1955 & OCI/NRI)",
+              "target_qs": 18,
+              "count": 18
+            }
+          }
+        },
+        "02": {
+          "name": "Fundamental Rights, DPSP, Duties & Basic Structure",
+          "topics": {
+            "01": {
+              "id": "P-02-01",
+              "name": "Fundamental Rights I: State Definition, Art 13 Doctrines & Equality (Art 12–18)",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "P-02-02",
+              "name": "Fundamental Rights II: Liberty, Life, Privacy & Preventive Detention (Art 19–24)",
+              "target_qs": 30,
+              "count": 30
+            },
+            "03": {
+              "id": "P-02-03",
+              "name": "Fundamental Rights III: Religion, Minorities, Exceptions & Writs (Art 25–35)",
+              "target_qs": 24,
+              "count": 24
+            },
+            "04": {
+              "id": "P-02-04",
+              "name": "Directive Principles (DPSP), FR-DPSP Balance & Fundamental Duties",
+              "target_qs": 24,
+              "count": 24
+            },
+            "05": {
+              "id": "P-02-05",
+              "name": "Constitutional Amendment (Article 368) & Basic Structure Doctrine",
+              "target_qs": 18,
+              "count": 18
+            }
+          }
+        },
+        "03": {
+          "name": "Federalism, Centre-State Relations & Emergency Provisions",
+          "topics": {
+            "01": {
+              "id": "P-03-01",
+              "name": "Indian Federalism, Legislative & Administrative Relations (Art 245–263)",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "P-03-02",
+              "name": "Centre-State Financial Relations, GST Council & Inter-State Water Disputes",
+              "target_qs": 18,
+              "count": 18
+            },
+            "03": {
+              "id": "P-03-03",
+              "name": "Emergency Provisions (Articles 352–360)",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "04": {
+          "name": "Union & State Executive",
+          "topics": {
+            "01": {
+              "id": "P-04-01",
+              "name": "President, Vice-President, Prime Minister & Union Council of Ministers",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "P-04-02",
+              "name": "Governor, Chief Minister, Delhi LG & Comparative Executive Powers",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "05": {
+          "name": "Parliament & State Legislatures",
+          "topics": {
+            "01": {
+              "id": "P-05-01",
+              "name": "Parliament Composition, Presiding Officers, Disqualifications & Anti-Defection",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "P-05-02",
+              "name": "Legislative Procedures, Bills, Motions, Parliamentary Devices & Budget",
+              "target_qs": 36,
+              "count": 36
+            },
+            "03": {
+              "id": "P-05-03",
+              "name": "Parliamentary Committees, Privileges & State Legislative Councils",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "06": {
+          "name": "The Judiciary",
+          "topics": {
+            "01": {
+              "id": "P-06-01",
+              "name": "Supreme Court of India: Collegium, Jurisdiction & Judicial Doctrines",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "P-06-02",
+              "name": "High Courts, Subordinate Judiciary, Tribunals & Alternative Dispute Resolution",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "07": {
+          "name": "Local Government, Schedules & Constitutional/Statutory Bodies",
+          "topics": {
+            "01": {
+              "id": "P-07-01",
+              "name": "Panchayati Raj (73rd, PESA), Urban Local Bodies (74th) & Co-operatives (97th)",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "P-07-02",
+              "name": "Fifth & Sixth Schedules, Special Provisions (Art 371–371J) & Official Language",
+              "target_qs": 18,
+              "count": 18
+            },
+            "03": {
+              "id": "P-07-03",
+              "name": "Constitutional Bodies: ECI, CAG, UPSC/SPSC, Finance Commission, NCSC/NCST/NCBC, AG",
+              "target_qs": 24,
+              "count": 24
+            },
+            "04": {
+              "id": "P-07-04",
+              "name": "Statutory, Regulatory & Quasi-Judicial Bodies (NHRC, CIC, CVC, Lokpal, CBI, NITI)",
+              "target_qs": 18,
+              "count": 18
+            }
+          }
+        }
+      }
+    },
+    "S": {
+      "name": "Science & Technology Core Concepts",
+      "file": "S_science_tech.json",
+      "count": 300,
+      "modules": {
+        "01": {
+          "name": "Cell Biology, Genetics & Biotechnology Principles",
+          "topics": {
+            "01": {
+              "id": "S-01-01",
+              "name": "Cellular Biology, DNA/RNA Molecular Mechanics & Protein Synthesis",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "S-01-02",
+              "name": "Recombinant DNA, CRISPR-Cas9, Gene Editing & Mitochondrial Replacement Therapy",
+              "target_qs": 30,
+              "count": 30
+            },
+            "03": {
+              "id": "S-01-03",
+              "name": "Stem Cells, Therapeutic Cloning & Genome Sequencing",
+              "target_qs": 18,
+              "count": 18
+            },
+            "04": {
+              "id": "S-01-04",
+              "name": "Agricultural Biotechnology: GM Crops, RNA Interference & Biofortification",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "02": {
+          "name": "Human Physiology, Immunity & Disease Mechanisms",
+          "topics": {
+            "01": {
+              "id": "S-02-01",
+              "name": "Human Immune System Architecture & Vaccine Platforms",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "S-02-02",
+              "name": "Pathogen Biology: Viral, Bacterial, Protozoan, Fungal & Prion Diseases",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "S-02-03",
+              "name": "Antimicrobial Resistance (AMR), Superbugs, Probiotics & Micronutrients",
+              "target_qs": 18,
+              "count": 18
+            }
+          }
+        },
+        "03": {
+          "name": "Applied Physics, Nuclear Energy & Space Mechanics",
+          "topics": {
+            "01": {
+              "id": "S-03-01",
+              "name": "Electromagnetic Spectrum, Optics, Semiconductors & Superconductors",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "S-03-02",
+              "name": "Nuclear Fission, Fusion Reactors & India's Three-Stage Nuclear Power Programme",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "S-03-03",
+              "name": "Orbital Mechanics, Satellite Types & Launch Vehicle Physics",
+              "target_qs": 30,
+              "count": 30
+            }
+          }
+        },
+        "04": {
+          "name": "Telecom, Cryptography & Emerging Computing Architectures",
+          "topics": {
+            "01": {
+              "id": "S-04-01",
+              "name": "Telecom Architectures: 5G/6G Spectrum, Li-Fi, Satellite Broadband & IoT",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "S-04-02",
+              "name": "Public-Key Cryptography, Blockchain Mechanics & Web3 Architectures",
+              "target_qs": 18,
+              "count": 18
+            },
+            "03": {
+              "id": "S-04-03",
+              "name": "Artificial Intelligence Foundations & Quantum Computing Mechanics",
+              "target_qs": 18,
+              "count": 18
+            }
+          }
+        }
+      }
+    },
+    "V": {
+      "name": "Environment, Ecology & Biodiversity",
+      "file": "V_environment.json",
+      "count": 438,
+      "modules": {
+        "01": {
+          "name": "Ecosystem Dynamics & Biogeochemical Cycles",
+          "topics": {
+            "01": {
+              "id": "V-01-01",
+              "name": "Ecosystem Concepts, Levels of Organization, Ecological Niche & Biotic Interactions",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "V-01-02",
+              "name": "Trophic Energy Flow, Ecological Pyramids, Productivity & Succession",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "V-01-03",
+              "name": "Biogeochemical Cycles (Carbon, Nitrogen, Phosphorus, Sulphur) & Fixation",
+              "target_qs": 24,
+              "count": 24
+            }
+          }
+        },
+        "02": {
+          "name": "Biomes, Aquatic Ecosystems & Wetland Conservation",
+          "topics": {
+            "01": {
+              "id": "V-02-01",
+              "name": "Terrestrial Biomes, Forest Types & Mountain Ecosystems",
+              "target_qs": 18,
+              "count": 18
+            },
+            "02": {
+              "id": "V-02-02",
+              "name": "Aquatic Ecosystems: Wetlands, Ramsar Criteria, Mangroves, Estuaries & Coral Reefs",
+              "target_qs": 30,
+              "count": 30
+            }
+          }
+        },
+        "03": {
+          "name": "Biodiversity, Indian Species Profiles & Conservation",
+          "topics": {
+            "01": {
+              "id": "V-03-01",
+              "name": "Biodiversity Concepts, Gradients, Hotspots & Biogeographic Zones of India",
+              "target_qs": 24,
+              "count": 24
+            },
+            "02": {
+              "id": "V-03-02",
+              "name": "In-Situ Conservation Network: National Parks, Wildlife Sanctuaries & Biosphere Reserves",
+              "target_qs": 36,
+              "count": 36
+            },
+            "03": {
+              "id": "V-03-03",
+              "name": "Indian Fauna Profiles, Habitat Ranges & Conservation Status",
+              "target_qs": 36,
+              "count": 36
+            },
+            "04": {
+              "id": "V-03-04",
+              "name": "Ex-Situ Conservation & Genetic Preservation Mechanisms",
+              "target_qs": 18,
+              "count": 18
+            }
+          }
+        },
+        "04": {
+          "name": "Pollution Mechanics, Waste Management & Climate Science",
+          "topics": {
+            "01": {
+              "id": "V-04-01",
+              "name": "Air & Water Pollution, Smog Chemistry, Eutrophication & Bioaccumulation",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "V-04-02",
+              "name": "Waste Management Regimes, POPs, Heavy Metals & Bioremediation",
+              "target_qs": 24,
+              "count": 24
+            },
+            "03": {
+              "id": "V-04-03",
+              "name": "Climate Change Science, Radiative Forcing, Global Warming Potential & Ozone Depletion",
+              "target_qs": 30,
+              "count": 30
+            }
+          }
+        },
+        "05": {
+          "name": "Environmental Laws, Regulatory Bodies & Global Treaties",
+          "topics": {
+            "01": {
+              "id": "V-05-01",
+              "name": "Wildlife Protection Act, 1972 & Wildlife (Amendment) Act, 2022 (4-Schedule Architecture)",
+              "target_qs": 30,
+              "count": 30
+            },
+            "02": {
+              "id": "V-05-02",
+              "name": "Environment Protection Act, 1986, Forest Rights Act, 2006 & Biological Diversity Act",
+              "target_qs": 30,
+              "count": 30
+            },
+            "03": {
+              "id": "V-05-03",
+              "name": "Statutory Bodies: NGT, CPCB, Central Ground Water Authority, NBA & CAMPA",
+              "target_qs": 24,
+              "count": 24
+            },
+            "04": {
+              "id": "V-05-04",
+              "name": "International Treaties: UNFCCC (Paris, COP Mechanisms), CBD, CITES, CMS & Chemical Treaties",
+              "target_qs": 36,
+              "count": 36
+            }
+          }
+        }
+      }
+    }
+  }
+}
