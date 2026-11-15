@@ -36,6 +36,7 @@ const state = {
   config: {
     mode: "practice",
     confidenceEnabled: true,
+    order: "shuffle",
     poolPreset: "all",
     hideEmptyTopics: true,
     selectedTopics: new Set(),
@@ -359,7 +360,15 @@ function startSession() {
   const pool = filterByPoolPreset(getBaseFilteredQuestions(), state.config.poolPreset);
   if (!pool.length) return;
 
-  const selected = pool.slice(0, state.config.limit);
+  const workingPool = [...pool];
+  if (state.config.order === "shuffle") {
+    for (let i = workingPool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [workingPool[i], workingPool[j]] = [workingPool[j], workingPool[i]];
+    }
+  }
+
+  const selected = workingPool.slice(0, state.config.limit);
   state.session = {
     active: true,
     finished: false,
@@ -895,6 +904,14 @@ function bindEvents() {
     state.config.confidenceEnabled = false;
     document.getElementById("conf-toggle-off").classList.add("active");
     document.getElementById("conf-toggle-on").classList.remove("active");
+  });
+
+  ["order-btn-shuffle", "order-btn-sequential"].forEach((id) => {
+    document.getElementById(id).addEventListener("click", (e) => {
+      state.config.order = e.target.dataset.order;
+      document.getElementById("order-btn-shuffle").classList.toggle("active", state.config.order === "shuffle");
+      document.getElementById("order-btn-sequential").classList.toggle("active", state.config.order === "sequential");
+    });
   });
 
   document.getElementById("pool-preset-select").addEventListener("change", (e) => {
